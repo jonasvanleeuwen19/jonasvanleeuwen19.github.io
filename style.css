@@ -704,7 +704,7 @@ button {
 .tf__banner_img .img::after {
   position: absolute;
   content: "";
-  background: url(../images/banner_shape.png);
+  background: url(banner_shape.png);
   background-position: center top;
   background-repeat: no-repeat;
   background-size: cover;
