@@ -704,7 +704,7 @@ button {
 .tf__banner_img .img::after {
   position: absolute;
   content: "";
-  background: url(banner_shape.png);
+  background: url(/assets/images/banner_shape.png);
   background-position: center top;
   background-repeat: no-repeat;
   background-size: cover;
@@ -1593,7 +1593,7 @@ main {
 .tf__about_img_2::before {
   position: absolute;
   content: "";
-  background: url(../images/about_shapes.png);
+  background: url(/assets/images/about_shapes.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -1797,7 +1797,7 @@ main {
 .tf__single_skill_2 .tf__team_skills_bar_single .tip::after {
   position: absolute;
   content: "";
-  background: url(../images/skills_shape.png);
+  background: url(/assets/images/skills_shape.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
