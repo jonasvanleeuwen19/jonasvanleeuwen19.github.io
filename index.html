@@ -1,0 +1,313 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Personal website of Jonas van Leeuwen - Web developer, Linux enthusiast, CTF player and video editor">
+  <meta name="author" content="Jonasvanleeuwen19">
+  <title>Jonasvanleeuwen19 | Web Developer</title>
+  <link rel="icon" type="image/png" href="/assets/images/logo.png">
+  <!-- Bootstrap core CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    :root {
+      --accent-color: #3a86ff;
+      --accent-hover: #2a65cc;
+      --dark-bg: #121212;
+      --card-bg: rgba(30, 30, 30, 0.7);
+      --card-border: rgba(255, 255, 255, 0.05);
+      --text-primary: #f8f9fa;
+      --text-secondary: #adb5bd;
+    }
+
+    body {
+      background-color: var(--dark-bg);
+      color: var(--text-primary);
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-image: url("/assets/images/blue-wave-background.png");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      transition: all 0.3s ease;
+    }
+
+    .glass-card {
+      background: var(--card-bg);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border: 1px solid var(--card-border);
+      border-radius: 18px;
+      box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.36);
+      transition: all 0.3s ease;
+    }
+
+    .glass-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 40px 0 rgba(0, 0, 0, 0.45);
+    }
+
+    .btn-accent {
+      background-color: var(--accent-color);
+      border-color: var(--accent-color);
+      color: white;
+      border-radius: 12px;
+      padding: 10px 25px;
+      font-weight: 600;
+      transition: all 0.3s ease;
+    }
+
+    .btn-accent:hover {
+      background-color: var(--accent-hover);
+      border-color: var(--accent-hover);
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba(58, 134, 255, 0.4);
+    }
+
+    .btn-outline {
+      color: var(--accent-color);
+      border-color: var(--accent-color);
+      border-radius: 12px;
+      padding: 10px 25px;
+      font-weight: 600;
+      background: transparent;
+      transition: all 0.3s ease;
+    }
+
+    .btn-outline:hover {
+      background-color: var(--accent-color);
+      color: white;
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba(58, 134, 255, 0.4);
+    }
+
+    header {
+      border-bottom: 1px solid var(--card-border) !important;
+    }
+    
+    .logo {
+      margin-right: 10px;
+    }
+    
+    .logo-text {
+      background: linear-gradient(45deg, var(--accent-color), #60a5fa);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      font-weight: 700;
+    }
+
+    footer {
+      border-top: 1px solid var(--card-border) !important;
+      color: var(--text-secondary) !important;
+    }
+
+    .glow {
+      text-shadow: 0 0 10px rgba(58, 134, 255, 0.5);
+    }
+
+    .feature-icon {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      color: var(--accent-color);
+    }
+
+    /* Skill badges */
+    .skill-badge {
+      background: rgba(58, 134, 255, 0.15);
+      color: var(--accent-color);
+      border: 1px solid rgba(58, 134, 255, 0.3);
+      border-radius: 30px;
+      padding: 8px 16px;
+      margin: 5px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      display: inline-block;
+      transition: all 0.3s ease;
+    }
+
+    .skill-badge:hover {
+      background: rgba(58, 134, 255, 0.3);
+      transform: translateY(-3px);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    .skill-badge i {
+      margin-right: 6px;
+    }
+
+    /* Interest cards */
+    .interest-card {
+      position: relative;
+      overflow: hidden;
+      height: 100%;
+    }
+
+    .interest-card .icon-bg {
+      position: absolute;
+      right: -20px;
+      bottom: -15px;
+      font-size: 5rem;
+      opacity: 0.15;
+      transform: rotate(-5deg);
+      transition: all 0.3s ease;
+    }
+
+    .interest-card:hover .icon-bg {
+      opacity: 0.25;
+      transform: rotate(0deg) scale(1.1);
+    }
+  </style>
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+<main>
+  <div class="container py-4">
+    <header class="pb-3 mb-4 border-bottom d-flex justify-content-between align-items-center">
+      <div>
+        <a href="/" class="d-flex align-items-center text-decoration-none mb-2">
+          <img src="assets/images/logo.png" alt="Jonasvanleeuwen19 Logo" class="logo" width="40" height="40">
+          <span class="fs-4 logo-text ms-2">Jonasvanleeuwen19</span>
+        </a>
+        <nav class="d-flex gap-4">
+          <a href="#about" class="text-decoration-none" style="color: var(--text-secondary);">About</a>
+          <a href="#skills" class="text-decoration-none" style="color: var(--text-secondary);">Skills</a>
+          <a href="#interests" class="text-decoration-none" style="color: var(--text-secondary);">Interests</a>
+        </nav>
+      </div>
+      <a href="https://yixboost.dev" target="_blank" class="text-decoration-none d-flex align-items-center gap-2" style="color: var(--text-secondary);">
+        Open Yixboost <i class="fas fa-arrow-right"></i>
+      </a>
+    </header>
+
+    <div id="about" class="p-5 mb-4 glass-card">
+      <div class="container-fluid py-4">
+        <h1 class="display-5 fw-bold glow">Hey, I'm Jonas👋</h1>
+        <p class="col-md-9 fs-4">I’m a 14-year-old programmer from the Netherlands, skilled in HTML, CSS, Node JS, Python and PHP, and a Linux user. My main project is Yixboost Games, a gaming website where I share my passion for coding and gaming. Always eager to learn more! </p>
+        <a class="btn btn-accent btn-lg mt-3" type="button" href="https://github.com/jonasvanleeuwen19" target="_blank">
+          <i class="fa-brands fa-github me-2"></i>Github
+        </a>
+      </div>
+    </div>
+
+    <h2 id="interests" class="logo-text mb-4">What I'm Passionate About</h2>
+    <div class="row align-items-md-stretch g-4 mb-5">
+      <div class="col-md-6 col-lg-3">
+        <div class="h-100 p-4 glass-card interest-card">
+          <i class="fas fa-code icon-bg"></i>
+          <i class="fas fa-code feature-icon"></i>
+          <h3>Web Development</h3>
+          <p>Building responsive websites with HTML, CSS, JavaScript and PHP. Creating modern user experiences is what drives me.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3">
+        <div class="h-100 p-4 glass-card interest-card">
+          <i class="fas fa-film icon-bg"></i>
+          <i class="fas fa-film feature-icon"></i>
+          <h3>Video Editing</h3>
+          <p>Creating engaging video content using VSDC Video Editor. Turning raw footage into captivating stories.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3">
+        <div class="h-100 p-4 glass-card interest-card">
+          <i class="fab fa-linux icon-bg"></i>
+          <i class="fab fa-linux feature-icon"></i>
+          <h3>Linux</h3>
+          <p>Linux enthusiast who enjoys customizing systems and exploring open source solutions for everyday tasks.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3">
+        <div class="h-100 p-4 glass-card interest-card">
+          <i class="fas fa-flag icon-bg"></i>
+          <i class="fas fa-flag feature-icon"></i>
+          <h3>CTF Competitions</h3>
+          <p>Participating in Capture The Flag competitions to improve my cybersecurity skills and problem-solving abilities.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="row align-items-md-stretch g-4 mb-5">
+      <div class="col-md-6 col-lg-3">
+        <div class="h-100 p-4 glass-card interest-card">
+          <i class="fab fa-python icon-bg"></i>
+          <i class="fab fa-python feature-icon"></i>
+          <h3>Python</h3>
+          <p>One of my favorite programming languages for its versatility and simplicity. I use PyCharm as my go-to IDE for Python development.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3">
+        <div class="h-100 p-4 glass-card interest-card">
+          <i class="fab fa-node-js icon-bg"></i>
+          <i class="fab fa-node-js feature-icon"></i>
+          <h3>Node.js</h3>
+          <p>Building fast and scalable server-side applications using Node.js with WebStorm as my development environment.</p>
+        </div>
+      </div>
+    </div>
+
+    <h2 id="skills" class="logo-text mb-4">My Skills</h2>
+    <div class="glass-card p-4 mb-5">
+      <h3 class="mt-4 mb-4">Programming Languages</h3>
+      <div class="d-flex flex-wrap">
+        <span class="skill-badge"><i class="fab fa-python"></i>Python</span>
+        <span class="skill-badge"><i class="fab fa-node-js"></i>Node.js</span>
+        <span class="skill-badge"><i class="fab fa-js"></i>TypeScript</span>
+        <span class="skill-badge"><i class="fab fa-php"></i>PHP</span>
+        <span class="skill-badge"><i class="fa-brands fa-html5"></i>HTML</span>
+        <span class="skill-badge"><i class="fa-brands fa-css3-alt"></i>CSS</span>
+        <span class="skill-badge"><i class="fa-brands fa-js"></i>Javascript</span>
+      </div>
+    </div>
+
+    <h2 id="projects" class="logo-text mb-4">Featured Projects</h2>
+    <div class="row align-items-md-stretch g-4 mb-5">
+      <div class="col-md-6">
+        <div class="h-100 p-5 glass-card">
+          <i class="fas fa-gamepad feature-icon"></i>
+          <h3>Yixboost Games</h3>
+          <p>A website featuring free unblocked games, built with HTML, CSS, and PHP. A fun project that combines my passion for web development and gaming.</p>
+          <div class="d-flex flex-wrap mt-3 mb-3">
+            <span class="skill-badge"><i class="fab fa-html5"></i>HTML5</span>
+            <span class="skill-badge"><i class="fab fa-css3-alt"></i>CSS3</span>
+            <span class="skill-badge"><i class="fab fa-php"></i>PHP</span>
+          </div>
+          <a href="https://play.yixboost.dev" target="_blank" class="btn btn-outline mt-2" type="button">
+            <i class="fas fa-gamepad me-2"></i>Play Games
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <footer class="pt-3 mt-4 text-muted border-top text-center">
+      <div class="row">
+        <div class="col-md-4 mb-3 mb-md-0">
+          <h5 class="logo-text" style="color: var(--text-primary);">Jonasvanleeuwen19</h5>
+          <p class="small" style="color: var(--text-primary);">Web Developer | Linux Enthusiast | CTF Player</p>
+        </div>
+        <div class="col-md-4 mb-3 mb-md-0">
+          <div class="d-flex justify-content-center gap-3 fs-4">
+            <a href="https://github.com/jonasvanleeuwen19" target="_blank" class="text-decoration-none" style="color: var(--text-primary);">
+              <i class="fab fa-github"></i>
+            </a>
+            <a href="https://instagram.com/jonasvanleeuwen19" target="_blank" class="text-decoration-none" style="color: var(--text-primary);">
+              <i class="fab fa-instagram"></i>
+            </a>
+          </div>
+        </div>
+        <div class="col-md-4" style="color: var(--text-primary);">
+          <p class="small">&copy; 2025 Jonasvanleeuwen19</p>
+        </div>
+      </div>
+    </footer>
+  </div>
+</main>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
